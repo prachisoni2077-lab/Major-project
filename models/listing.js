@@ -7,20 +7,15 @@ const listingSchema = new Schema({
     required: true,
   },
   description: String,
+  // IMAGE KO STRING KI JAGAH OBJECT BANAO
   image: {
-    type: String,
-    default:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUhKRLGwTNsnrejbf0xhvsf86M-Ekq_AfIs6gHcJzDRu7vh6F",
-    set: (v) =>
-      v === ""
-        ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUhKRLGwTNsnrejbf0xhvsf86M-Ekq_AfIs6gHcJzDRu7vh6F"
-        : v,
+    filename: String,
+    url: String,
   },
   price: Number,
   location: String,
   country: String,
 });
 
-// ✅ YAHI MAIN FIX HAI
 const Listing = mongoose.model("Listing", listingSchema);
-
 module.exports = Listing;
