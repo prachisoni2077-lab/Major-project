@@ -105,3 +105,24 @@ transition-timing-function: ease-in;
 color:black;
 font-weight: bold;
 }
+.show-image{
+    height:30vh;
+
+}
+.btns{
+    display:flex;
+  justify-content: space-between;
+}
+.put{
+    margin:4px;
+    transition: all;
+}
+.put:hover{
+    transform:scale(1.01);
+    
+    transition-duration: 0.1;
+   transition-timing-function: ease-in;
+   background-color: rgb(233, 137, 137);
+   box-shadow:  0 2px 4px rgb(58, 55, 55);
+
+}
